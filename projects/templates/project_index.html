@@ -2,6 +2,7 @@
 {% load static %}
 {% block page_content %}
 <h1>Projects</h1>
+    <img src="{% static 'project_images/blog_post.png'%}">
 <div class="row">
     {% for project in projects %}
     <div class="card mb-3">
@@ -19,27 +20,6 @@
 
         </div>
     </div>
-    <!--    <div class="card mb-3">-->
-    <!--        <img src="{{project.image.url}}" class="card-img-top" alt="">-->
-    <!--        <div class="card-body">-->
-    <!--            <h5 class="card-title">{{project.title}}</h5>-->
-    <!--            <p class="card-text">{{project.description}}</p>-->
-    <!--            <a href="{% url 'project_detail' project.pk %}" class="btn btn-primary">Read More</a>-->
-    <!--        </div>-->
-    <!--    </div>-->
-    <!--    <div class="col-md-4">-->
-    <!--        <div class="card mb-2">-->
-    <!--            <img class="card-img-top" src="{{project.image.url}}">-->
-    <!--            <div class="card-body">-->
-    <!--                <h5 class="card-title">{{ project.title }}</h5>-->
-    <!--                <p class="card-text">{{ project.description }}</p>-->
-    <!--                <a href="{% url 'project_detail' project.pk %}"-->
-    <!--                   class="btn btn-primary">-->
-    <!--                    Read More-->
-    <!--                </a>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
     {% endfor %}
 </div>
 {% endblock %}
