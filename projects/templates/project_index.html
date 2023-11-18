@@ -2,7 +2,6 @@
 {% load static %}
 {% block page_content %}
 <h1>Projects</h1>
-    <img src="{% static 'project_images/blog_post.png'%}">
 <div class="row">
     {% for project in projects %}
     <div class="card mb-3">
@@ -15,7 +14,8 @@
                 </div>
             </div>
             <div class="col-md-8">
-                <img src="{{project.image.url}}" class="img-fluid rounded-start" alt="">
+                <img src="{% static 'project_images/blog_post.png'%}" class="img-fluid rounded-start" alt="">
+<!--                <img src="{{project.image.url}}" class="img-fluid rounded-start" alt="">-->
             </div>
 
         </div>
