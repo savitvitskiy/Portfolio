@@ -14,10 +14,15 @@
                 </div>
             </div>
             <div class="col-md-8">
-                <img src="{% static 'project_images/{{project.id}}.png'%}" class="img-fluid rounded-start" alt="">
 <!--                <img src="{{project.image.url}}" class="img-fluid rounded-start" alt="">-->
+                {% if project.id == 1 %}
+                <img src="{% static 'project_images/blog_post.png'%}" class="img-fluid rounded-start" alt="">
+                {% elif project.id == 2 %}
+                <img src="{% static 'project_images/weather_detector.png'%}" class="img-fluid rounded-start" alt="">
+                {% elif project.id == 3 %}
+                <img src="{% static 'project_images/fruit_shop.png'%}" class="img-fluid rounded-start" alt="">
+                {% endif %}
             </div>
-
         </div>
     </div>
     {% endfor %}
