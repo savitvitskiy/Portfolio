@@ -11,6 +11,14 @@ def project_index(request):
     return render(request, 'project_index.html', context)
 
 
+def project_index_data(request):
+    projects = Project.objects.all()
+    context = {
+        'projects': projects
+    }
+    return render(request, 'project_index_data.html', context)
+
+
 def project_detail(request, pk):
     project = Project.objects.get(pk=pk)
     context = {

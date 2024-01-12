@@ -10,4 +10,4 @@ class Project(models.Model):
     image = models.FileField(upload_to="project_images/", blank=True)
 
     def __str__(self):
-        return self.title
+        return f"{self.title} {self.id}"

@@ -5,7 +5,7 @@
 
 <div class="row">
     {% for project in projects %}
-    {% if project.id < 4 %}
+    {% if project.id > 3 %}
     <div class="card mb-3">
         <div class="row g-0">
             <div class="col-md-4">
@@ -16,13 +16,10 @@
                 </div>
             </div>
             <div class="col-md-8">
-<!--                <img src="{{project.image.url}}" class="img-fluid rounded-start" alt="">-->
-                {% if project.id == 1 %}
-                <img src="{% static 'project_images/blog_post.png'%}" class="img-fluid rounded-start" alt="">
-                {% elif project.id == 2 %}
-                <img src="{% static 'project_images/weather_detector.png'%}" class="img-fluid rounded-start" alt="">
-                {% elif project.id == 3 %}
-                <img src="{% static 'project_images/fruit_shop.png'%}" class="img-fluid rounded-start" alt="">
+                {% if project.id == 4 %}
+                <img src="{% static 'project_images/country_analysis.png'%}" class="img-fluid rounded-start" alt="">
+                {% elif project.id == 5 %}
+                <img src="{% static 'project_images/which_country.png'%}" class="img-fluid rounded-start" alt="">
                 {% endif %}
             </div>
         </div>

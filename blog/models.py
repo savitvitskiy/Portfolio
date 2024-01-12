@@ -17,7 +17,7 @@ class Post(models.Model):
     image = models.FileField(upload_to="project_images/", blank=True)
 
     def __str__(self):
-        return self.title, self.id
+        return f"{self.title} {self.id}"
 
 
 class Comment(models.Model):

@@ -13,13 +13,16 @@
         {% endfor %}
     </small>
     <p>{{ post.body | linebreaks }}</p>
-<!--    <img src="{{post.image.url}}" alt="" style="width: 40vw">-->
     {% if post.id == 1 %}
     <img src="{% static 'project_images/colorwheel.png' %}" class="img-fluid rounded-start" alt="">
     {% elif post.id == 2 %}
     <img src="{% static 'project_images/objectoriented.png' %}" class="img-fluid rounded-start" alt="">
     {% elif post.title == "Summation of Kanban Boards" %}
     <img src="{% static 'project_images/kanban_board.png' %}" class="img-fluid rounded-start" alt="">
+    {% elif post.id == 4 %}
+    <img src="{% static 'project_images/samplefiles.png' %}" class="img-fluid rounded-start" alt="">
+    {% elif post.id == 9 %}
+    <img src="{% static 'project_images/LinkedInmeta.png' %}" class="img-fluid rounded-start" alt="">
     {% endif %}
     <br><br>
     <h3>Leave a comment:</h3>
